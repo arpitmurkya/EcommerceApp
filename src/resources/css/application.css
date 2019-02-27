@@ -1,0 +1,14 @@
+@import url('./../../../node_modules/@fortawesome/fontawesome-free/css/all.css');
+
+.product-image {
+    /* float: left; */
+    width: 160px;
+    height: 160px;
+    /* margin: 0 30px 20px 0;
+    &:nth-child(2n) {
+        clear: left;
+    }
+    &:nth-child(2n+1) {
+        margin-right: 0;
+    } */
+}
