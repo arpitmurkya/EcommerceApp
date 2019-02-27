@@ -25,28 +25,9 @@ class App extends Component {
     super(props);
 
     this.state = {
-      productList:[],
-      displayFooter:true
+      productList:[]
     }
   }
-
-  // handleScroll = (e) => {
-  //   if(window.pageYOffset > 50 && window.pageYOffset < 900) {
-  //     console.log('scrolled');
-  //     this.setState({
-  //       displayFooter: true,
-  //     });
-  //   } else {
-  //     this.setState({
-  //       displayFooter: false,
-  //     });
-  //   }
-  // }
-
-  // applyRef = ref => {
-  //   this.vn = ref;
-  //   this.vn.addEventListener('scroll', this.handleScroll);
-  // }
 
   render() {
 
