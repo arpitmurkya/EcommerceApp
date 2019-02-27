@@ -5,7 +5,7 @@ import './../resources/css/bootstrap.css';
 import style from './../resources/css/applicationStyles';
 
 // Images
-import image from './../images/logo-1.png';
+import image from './../resources/images/logo-1.png';
 
 class Header extends Component {
     render() {
