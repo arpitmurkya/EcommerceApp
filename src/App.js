@@ -29,6 +29,7 @@ class App extends Component {
     }
   }
 
+
   render() {
 
     return (
@@ -39,8 +40,7 @@ class App extends Component {
             render={(props) => <ProductListing {...this.props} />} 
           />
           <Route exact path='/products/:productId'
-            render={(props) => (this.state.displayFooter && 
-              <ProductDetail {...this.props} params={props.match.params}/>)} />
+            render={(props) => <ProductDetail {...this.props} params={props.match.params}/>} />
         </Switch>
         <Footer />
       </div>
