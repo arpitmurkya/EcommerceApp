@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+// CSS
 import './../resources/css/bootstrap.css';
 import style from './../resources/css/applicationStyles';
 

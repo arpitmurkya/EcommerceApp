@@ -14,7 +14,7 @@ class ProductListing extends Component {
                 <div>
                     <a href={url} >
                         <img style={style.productImgStyle} 
-                        src={this.props.data.images[0]} alt="" />
+                            src={this.props.data.images[0]} alt="" />
                     </a>
                 </div>
                 <div className="container">

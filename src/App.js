@@ -3,11 +3,15 @@ import { Switch, Route } from 'react-router-dom';
 
 // CSS
 import './App.css';
-import './resources/css/application.css';
 import './resources/css/bootstrap.css';
 
 // Store
 import {connect} from 'react-redux'
+
+
+// Action Creators
+import { getProductDetails } from './actions/ProductDetailAction';
+import { getProductsList } from './actions/ProductListingAction';
 
 // Components
 import Header from './components/Header';
@@ -15,20 +19,8 @@ import Footer from './components/Footer'
 import ProductListing from './components/ProductListingComponent';
 import ProductDetail from './components/ProductDetailComponent';
 
-// Action Creators
-import { getProductDetails } from './actions/ProductDetailAction';
-import { getProductsList } from './actions/ProductListingAction';
 
 class App extends Component {
-
-  constructor(props){
-    super(props);
-
-    this.state = {
-      productList:[]
-    }
-  }
-
 
   render() {
 

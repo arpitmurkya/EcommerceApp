@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { SyncLoader } from 'react-spinners';
+import { BounceLoader } from 'react-spinners';
 
 // CSS
 import './../resources/css/bootstrap.css';
+import style from './../resources/css/applicationStyles';
 
 // Components
 import ProductDialog from './ProductDialogComponent';
@@ -35,13 +36,15 @@ class ProductListing extends Component {
         return Object.keys(product).length;
     }
 
-    handleScroll(event) {
+    // To handle Scroll event
+    handleScroll() {
         var heightBound = window.outerHeight * 0.2;        
         if (window.scrollY > heightBound) {
             this.setState({pageIndex:this.state.pageIndex+1});
         }
     }
 
+    // To handle Load more button click
     handleOnClick(){
         this.setState({pageIndex:this.state.pageIndex+1});
     }
@@ -67,12 +70,14 @@ class ProductListing extends Component {
             );
         } else {
             return (
-                <div className="container p-4 "> 
-                    <SyncLoader
-                    sizeUnit={"px"}
-                    size={20}
-                    color={'#212529'}
-                    />
+                <div className="container" style={style.loaderOuterDivStyle}>
+                    <div className="center" style={style.loaderInnerDivStyle}>
+                        <BounceLoader
+                        sizeUnit={"px"}
+                        size={50}
+                        color={'#212529'}
+                        />
+                    </div>
                 </div>
             )
         }

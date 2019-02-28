@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { SyncLoader } from 'react-spinners';
+import { BounceLoader } from 'react-spinners';
 
 // CSS
 import style from './../resources/css/applicationStyles';
@@ -373,12 +373,14 @@ class ProductDetail extends Component {
             );
         } else {
             return (
-                <div className="container p-4"> 
-                    <SyncLoader
-                    sizeUnit={"px"}
-                    size={20}
-                    color={'#212529'}
-                    />
+                <div className="container" style={style.loaderOuterDivStyle}>
+                    <div className="center" style={style.loaderInnerDivStyle}>
+                        <BounceLoader
+                        sizeUnit={"px"}
+                        size={50}
+                        color={'#212529'}
+                        />
+                    </div>
                 </div>
             )
         }
